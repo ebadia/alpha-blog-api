@@ -33,7 +33,6 @@ gem 'cancancan'
 gem 'date_validator'
 gem 'foreigner'
 gem 'immigrant'
-gem 'rack-cors'#, :require => 'rack/cors'
 gem 'kaminari'
 gem 'api-pagination'
 
