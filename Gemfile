@@ -12,6 +12,7 @@ gem 'rails', '~> 5.0.2'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+gem 'active_model_serializers'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -23,7 +24,18 @@ gem 'puma', '~> 3.0'
 # gem 'capistrano-rails', group: :development
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
+gem 'devise'
+gem 'devise_security_extension'
+# JWT in ruby
+gem 'jwt'
+gem 'cancancan'
+gem 'date_validator'
+gem 'foreigner'
+gem 'immigrant'
+gem 'rack-cors'#, :require => 'rack/cors'
+gem 'kaminari'
+gem 'api-pagination'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -39,6 +51,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :development, :test do
+  # Use RSpec for specs
+ gem 'rspec-rails', '>= 3.5.0'
+ # Use Factory Girl for generating random test data
+ gem 'factory_girl_rails'
+end
 
 group :production do
   gem 'rails_12factor'

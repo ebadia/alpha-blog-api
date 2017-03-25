@@ -14,12 +14,13 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: sonrie
   host: localhost
+  socket: '/Applications/MAMP/tmp/mysql/mysql.sock'
 
 development:
   <<: *default
-  database: alpha_blog-api_development
+  database: alpha_blog-api_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
