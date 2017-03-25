@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   namespace :api , defaults: { format: :json } do
     #scope module: :v1 do
     namespace :v1 do
-      resources :users
-      resources :articles
+      resources :users, only: [:index, :create, :show, :update, :destroy]
+      resources :articles, only: [:index, :create, :show, :update, :destroy]
     end
   end
 end
