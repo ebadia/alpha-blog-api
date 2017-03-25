@@ -49,7 +49,15 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: alpha_blog-api_production
-  username: alpha_blog-api
-  password: <%= ENV['ALPHA_BLOG-API_DATABASE_PASSWORD'] %>
+  # <<: *default
+  # database: alpha_blog-api_production
+  # username: alpha_blog-api
+  # password: <%= ENV['ALPHA_BLOG-API_DATABASE_PASSWORD'] %>
+  adapter: pg
+  encoding: utf8
+  pool: 5
+  username: tjkmoiqazoivgr
+  password: 3caf54f24ce55f9ef8aa8b33fbe318af83303dd7f950fdec13399a99a96d371a
+  database: dafn1h9u8s4cpg
+  port: 5432
+  host: ec2-54-75-249-162.eu-west-1.compute.amazonaws.com
