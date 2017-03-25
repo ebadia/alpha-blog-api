@@ -1,4 +1,5 @@
 class Api::V1::ArticlesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_article, only: [:show, :update, :destroy]
 
   respond_to :json
